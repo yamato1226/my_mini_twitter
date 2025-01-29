@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡単な口コミサイト</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>日常を投稿</h1>
+  <form action="/post" method="post">
+    <textarea name="content" placeholder="口コミを投稿..." required></textarea>
+    <button type="submit">投稿</button>
+  </form>
+
+  <div class="posts">
+    <% posts.each do |post| %>
+      <div class="post">
+        <p><%= post %></p>
+      </div>
+    <% end %>
+  </div>
+</body>
+</html>
+
+
